@@ -3,31 +3,24 @@ public class lab4 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         int numBer = input.nextInt();
-        System.out.println(add(numBer));
-        input.close();
-    }
-
-    public static String add(int a){
-        String G;
-        if(a>=80&&a<=100){
-            G = "A";
+        if( numBer>=80 && numBer<=100){
+            System.out.println("A");
         }
-        else if(a>=70&&a<=79){
-            G = "B";
+        else if( numBer>=70 && numBer<=79){
+            System.out.println("B");
         }
-         else if(a>=60&&a<=69){
-            G = "C";
+         else if( numBer>=60 && numBer<=69){
+            System.out.println("C");
         }
-         else if(a>=50&&a<=59){
-            G = "D";
+         else if( numBer>=50 && numBer<=59){
+            System.out.println("D");
         }
-         else if(a>=0&&a<=49){
-            G = "F";
+         else if( numBer>=0 &&  numBer<=49){
+            System.out.println("F");
         }
         else{
-            G = "ERROR";
+            System.out.println("enternumber");
         }
-
-        return G;
+        input.close();
     }
 }

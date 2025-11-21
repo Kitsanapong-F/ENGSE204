@@ -1,3 +1,4 @@
+package LAB;
 import java.util.Scanner;
 public class lab8 {
     public static void main(String[] args) {
@@ -5,7 +6,7 @@ public class lab8 {
         int x = input.nextInt();
         int[] numbers = new int[x];
         int max = numbers[0];
-        for(int i = 0;i<=x-1;i++){
+        for(int i = 0;i<numbers.length;i++){
             numbers[i] = input.nextInt();
             if(numbers[i] > max) {
                 max = numbers[i]; 

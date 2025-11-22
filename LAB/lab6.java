@@ -1,13 +1,13 @@
 package LAB;
-import java.util.Scanner; // import Scanner
+import java.util.Scanner; 
 public class lab6 {
     public static void main(String[] args){
-        Scanner input = new Scanner(System.in); // สร้างScanner
+        Scanner input = new Scanner(System.in); 
         int numBer = input.nextInt(); 
         for(int i = 1 ;i<=12;i++){
-            System.out.printf("%d x %d = %d\n",numBer,i,(numBer*i));  //แสดงค่าแม่สูตรคูณ
+            System.out.printf("%d x %d = %d\n",numBer,i,(numBer*i)); 
         }
-        input.close(); // ปิดScanner
+        input.close(); 
     }
 }
 

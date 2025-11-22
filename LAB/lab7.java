@@ -1,7 +1,7 @@
 package LAB;
 import java.util.Scanner;
 public class lab7 {
-    public static void main(String[] args){
+    public static void main(String[] math){
         Scanner input = new Scanner(System.in);
         int num1 = input.nextInt();
         int sum=0;

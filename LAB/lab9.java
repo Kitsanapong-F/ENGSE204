@@ -1,7 +1,7 @@
 package LAB;
 import java.util.Scanner;
 public class lab9 {
-    public static void main(String[] args) {
+    public static void main(String[] AverAge) {
         Scanner input = new Scanner(System.in);
         int x = input.nextInt();
         double sum=0;

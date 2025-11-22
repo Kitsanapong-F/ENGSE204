@@ -1,12 +1,12 @@
 package LAB;
-import java.util.Scanner;
+import java.util.Scanner; // import Scanner
 public class lab5 {
     public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        System.out.print("Menu Number");
-        int numBer = input.nextInt();
+        Scanner input = new Scanner(System.in); // เรียกใช้Scanner
+        System.out.print("Menu Number"); // แสดงmenu number
+        int numBer = input.nextInt(); // รับค่าตัวเลข
         if(numBer==1){
-            System.out.println("Americano");
+            System.out.println("Americano"); 
         }
         else if(numBer==2){
             System.out.println("Latte");
@@ -20,6 +20,6 @@ public class lab5 {
         else{
             System.out.println("Invalid Menu");
         }
-        input.close(); 
+        input.close();  // ปิดScanner
     }
 }

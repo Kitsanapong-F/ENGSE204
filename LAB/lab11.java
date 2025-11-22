@@ -3,21 +3,24 @@ import java.util.Scanner;
 public class lab11 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        int N = input.nextInt();
-        int[] scores = new int[N];
-        int sum = sumArray(scores);
-        System.out.printf("%d",sum);
+        int numBer = input.nextInt();
+        int[] read = readarr(input, numBer);
+        int cal = calCulate(read);
+        System.out.printf("%d",cal);
         input.close();
     }
-    public static int sumArray(int[] numBer){
-        Scanner input = new Scanner(System.in);
-        int sum=0;
-        for(int i = 0;i<numBer.length;i++){
-        numBer[i] = input.nextInt();
-        sum = sum + numBer[i];
+    public static int[] readarr(Scanner input,int num){
+        int arrNum[] = new int[num];
+        for(int i = 0;i<arrNum.length;i++){
+            arrNum[i] = input.nextInt();
         }
-        input.close();
+        return arrNum;
+    }
+    public static int calCulate(int[] arr){
+        int sum = 0;
+        for(int j = 0;j<arr.length;j++){
+            sum = sum +arr[j];
+        }
         return sum;
     }
-    
 }

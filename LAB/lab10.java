@@ -1,7 +1,7 @@
 package LAB;
 import java.util.Scanner;
 public class lab10 {
-    public static void main(String[] args) {
+    public static void main(String[] Area) {
         Scanner input = new Scanner(System.in);
         double a = input.nextDouble();
         double b = input.nextDouble();

@@ -6,7 +6,7 @@ public class lab11 {
         int N = input.nextInt();
         int[] scores = new int[N];
         int sum = sumArray(scores);
-        System.out.println(sum);
+        System.out.printf("%d",sum);
         input.close();
     }
     public static int sumArray(int[] numBer){

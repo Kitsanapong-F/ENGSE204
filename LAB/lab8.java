@@ -1,7 +1,7 @@
 package LAB;
 import java.util.Scanner;
 public class lab8 {
-    public static void main(String[] args) {
+    public static void main(String[] max) {
         Scanner input = new Scanner(System.in);
         int x = input.nextInt();
         int[] numbers = new int[x];

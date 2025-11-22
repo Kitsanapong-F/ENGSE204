@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class lab5 {
     public static void main(String[] menu){
         Scanner input = new Scanner(System.in); 
-        System.out.print("Menu Number"); 
         int numBer = input.nextInt(); 
         if(numBer==1){
             System.out.println("Americano"); 

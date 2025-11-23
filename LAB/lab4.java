@@ -7,16 +7,16 @@ public class lab4 {
         if( numBer>=80 && numBer<=100){
             System.out.println("A");
         }
-        else if( numBer>=70 && numBer<=79){
+        else if( numBer>=70){
             System.out.println("B");
         }
-         else if( numBer>=60 && numBer<=69){
+         else if( numBer>=60 ){
             System.out.println("C");
         }
-         else if( numBer>=50 && numBer<=59){
+         else if( numBer>=50 ){
             System.out.println("D");
         }
-         else if( numBer>=0 &&  numBer<=49){
+         else if( numBer>=0 ){
             System.out.println("F");
         }
         else{

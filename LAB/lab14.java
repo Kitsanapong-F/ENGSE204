@@ -20,7 +20,7 @@ public class lab14 {
             System.out.printf("%d",numBerbombs);
         }
         else if( map[tarGetR][tarGetC] == tarGet){
-            System.err.println("mine");
+            System.err.println("Mine");
         }
         else if(map[tarGetR][tarGetC] == sPace){
             System.out.printf("%d",numBerbombs);

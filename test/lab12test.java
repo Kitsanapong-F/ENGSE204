@@ -1,4 +1,5 @@
-package LAB;
+package test;
+
 import java.util.Scanner;
 public class lab12test {
     public static void main(String[] args) {

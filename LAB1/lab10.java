@@ -1,4 +1,4 @@
-package LAB;
+package LAB1;
 import java.util.Scanner;
 public class lab10 {
     public static void main(String[] Area) {

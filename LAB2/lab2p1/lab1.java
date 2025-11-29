@@ -1,5 +1,7 @@
 package LAB2;
 import java.util.Scanner;
+
+import LAB2.lab2p9.Student;
 public class lab1 {
     public static void main(String[] args) {
      Scanner input = new Scanner(System.in);

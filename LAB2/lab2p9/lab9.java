@@ -1,4 +1,5 @@
 package LAB2.lab2p9;
+
 import java.util.Scanner;
 public class lab9 {
     public static void main(String[] args) {

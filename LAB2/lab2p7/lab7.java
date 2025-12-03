@@ -7,10 +7,10 @@ public class lab7 {
         double balance = input.nextDouble();
         double amount1 = input.nextDouble();
         double amount2 = input.nextDouble();
-        Account a = new Account(name, balance);
-        a.withdraw(amount1);
-        a.withdraw(amount2);
-        a.displayBalance();
+        Account a1 = new Account(name, balance);
+        a1.withdraw(amount1);
+        a1.withdraw(amount2);
+        a1.displayBalance();
         input.close();
     }
 }

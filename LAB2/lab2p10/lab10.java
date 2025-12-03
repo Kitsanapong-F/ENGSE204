@@ -1,64 +1,70 @@
 package LAB2.lab2p10;
 import java.util.Scanner;
-public class lab10 {
+
+public class Lab10 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        Product[] arritems = new Product[10];
-        
+        Product[] arrItems = new Product[10];
         int num = input.nextInt();
-        
-        
-        ShoppingCart s1 =new ShoppingCart(arritems, 0);
-        
-        for(int i = 0;i<num;i++){
-            String name =input.nextLine();
-            input.nextLine();
+        input.nextLine(); 
+
+    
+        ShoppingCart s1 = new ShoppingCart(arrItems, 0);
+
+        for(int i = 0; i < num; i++) {
+          
+            String name = input.nextLine();
+
+           
             double price = input.nextDouble();
+            input.nextLine(); 
+
+         
             Product p = new Product(name, price);
             s1.addProduct(p);
         }
-        System.out.println(s1.calculateprice());
+
+      
+        System.out.println(s1.calculatePrice());
 
         input.close();
     }
-
 }
 
 class Product {
-
     private String name;
-    public double price;
+    private double price;
 
-    public Product(String name , double price){
+    public Product(String name, double price) {
         this.name = name;
         this.price = price;
     }
-    
+
+    public double getPrice() {
+        return price;
+    }
 }
 
-class ShoppingCart{
- 
+class ShoppingCart {
     private Product[] items;
     private int itemsCount;
 
-    public ShoppingCart(Product[] arritems ,int itemsCount){
-        this.items = arritems;
+    public ShoppingCart(Product[] arrItems, int itemsCount) {
+        this.items = arrItems;
         this.itemsCount = itemsCount;
     }
 
-    public void addProduct(Product p){
-        
+    public void addProduct(Product p) {
         items[itemsCount] = p;
         itemsCount++;
-
     }
 
-    public double calculateprice(){
-        double sum = 0 ;
-        for(int j = 0;j<itemsCount;j++){
-            sum+=items[j].price;
-       }
-       return sum;
+    public double calculatePrice() {
+        double sum = 0;
+        for(int j = 0; j < itemsCount; j++) {
+            sum += items[j].getPrice();
+        }
+        return sum;
     }
 }

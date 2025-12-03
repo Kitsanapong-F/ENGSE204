@@ -1,17 +1,13 @@
-package LAB2.lab2p11;
+package LAB2.Lab2p11;
 import java.util.Scanner;
-public class lab11 {
+public class Lab11 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
         String model = input.nextLine();
-
         int year = input.nextInt();
         int newYear = input.nextInt();
-        
         Car c1 = new Car(model,year);
         c1.setYear(newYear);
-        
         System.out.println("Model:"+c1.getModel());
         System.out.println("Year:"+c1.getYear());
         input.close();
@@ -19,6 +15,7 @@ public class lab11 {
 }
 
 class Car{
+    
     private String model;
     private int year;
 

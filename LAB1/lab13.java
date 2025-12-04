@@ -3,22 +3,34 @@ import java.util.Scanner;;
 public class lab13 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
+       
         int R = input.nextInt();
         int C = input.nextInt();
-        int[][]  arRay2D = new int[R][C];
+        int[][]  arRay2D = new int[R][C]; // สร้างอะเรย์2มิติ
+
         for(int i = 0;i<R;i++){
+            
             for(int j = 0;j<C;j++){
-                arRay2D[i][j] = input.nextInt();
+                
+                arRay2D[i][j] = input.nextInt(); //รับค่าไว้มี่ตำแหน่งอะเรย์[i][j]
+
             }
         }
+        
         int onLine=0;
-         for(int i = 0;i<R;i++){
+         
+        for(int i = 0;i<R;i++){
+            
             for(int j = 0;j<C;j++){
-                if(arRay2D[i][j]==1){
+                
+                if(arRay2D[i][j]==1){ //เช็คค่าในอะเรย์ว่ามี 1 หรือไม่
+                    
                     onLine=onLine+1;
+
                 }
             }
         }
+        
         System.out.printf("%d",onLine);
         
         input.close();

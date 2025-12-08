@@ -5,33 +5,33 @@ import java.util.Scanner;
 public class Lab3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-       
-        int quantity = input.nextInt();
-    
-        for(int i = 0;i<quantity;i++){ //ลูปรับค่า id และ name
-           
-            String id = input.next();
-            String name = input.nextLine();
-            
-            new Student(id, name ); //สร้างออบเจ็กต์Student
-           
-        }
-        
-        System.out.println(Student.studentcount);
 
-        input.close();
+        int numBer = input.nextInt();
+
+        for(int i = 0;i<numBer;i++){ //ลูปรับค่าid และ name
+            
+            String id = input.next();
+            String name = input.next();
+            new Student(id,name);  //สร้างออบเจ็กต์Student
+        }
+
+        System.out.println(Student.studentCount);
+
     }
 }
+
 class Student{
    
+    private String sudentId;
     private String name;
-    private String studentID;
-    static int studentcount = 0;
+    static int studentCount = 0;
 
-    public Student(String id ,String name){
-        
+    public Student(String id , String name){
+
+        this.sudentId = id;
         this.name = name;
-        this.studentID = id;
-        studentcount++;
+        studentCount++;
+
     }
+   
 }

@@ -8,25 +8,13 @@ public class Lab1 {
 
         String name = input.nextLine();
 
-        User a1 = new User(name);
-        
-        System.out.println(a1.getUsername());
+        try {   //ตรวจจับข้อผิดพลาด
+            User N1 = new User(name); 
+            System.out.println(N1.getUsername()); 
+        } catch (IllegalArgumentException e) { //ถ้ามีข้อผิดพลาดให้ทำคำสั่งที่ตามมา
+            System.out.println("Error: " + e.getMessage());
+        }
 
         input.close();
-    }
-}
-
-class User{
-
-    private String username;
-
-    public User(String name){
-
-        username=name;
-    }
-
-    public String getUsername(){
-
-        return username; 
     }
 }

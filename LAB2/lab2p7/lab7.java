@@ -1,51 +1,57 @@
 package LAB2.lab2p7;
+
 import java.util.Scanner;
+
 public class Lab7 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-       
+
         String name = input.nextLine();
         double balance = input.nextDouble();
-        double monney1 = input.nextDouble();
-        double monney2 = input.nextDouble();
+        double amountOfmoney1 = input.nextDouble();
+        double amountOfmoney2 = input.nextDouble();
 
-        Account a = new Account(name, balance); //  สร้างออบเจ็กต์Account
+        BankAccount account  = new BankAccount(name,balance);
+        
+        account.mithdraw(amountOfmoney1);
+        account.mithdraw(amountOfmoney2);
 
-        a.withdraw(monney1); // เรียกใช้เมธอด withdraw
-        a.withdraw(monney2);  // เรียกใช้เมธอด withdraw
-        a.displayBalance();  // เรียกใช้เมธอด displayBalance
-
-        input.close();
+        account.displayBalance();
     }
 }
 
-class Account{
+
+
+class BankAccount{
 
     private String ownerName;
-    private double initialBalance;
+    private double balance;
 
-    public Account(String name,double balance) {
+    public BankAccount(String name ,double balance){
 
         this.ownerName = name;
-        this.initialBalance=balance;
+        this.balance = balance;
 
     }
 
-    public void withdraw(double amount){
+    public void mithdraw(double amount){
 
-        if(amount<=initialBalance){
-            System.out.println("Withdrawal successful.");
-            initialBalance = initialBalance-amount;
-        }
-        else if(amount>=initialBalance){
-            System.out.println("Insufficient funds.");
+        if(amount <= 0){
+            System.out.println("Error: Withdraw amount must be positive.");
+        }  
+        else if (amount > this.balance) {
+            System.out.println("Error: Insufficient funds.");
+        } 
+        else {
+            System.out.println("Status: Withdrawal successful.");
+            this.balance -= amount; 
         }
 
+        
     }
 
     public void displayBalance(){
 
-        System.out.printf("Balance:%.1f",initialBalance);
-        
+        System.out.println("Balance: "+ this.balance);
     }
 }

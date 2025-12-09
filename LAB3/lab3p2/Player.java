@@ -1,10 +1,8 @@
-package LAB3.lab3p2;
-
 public class Player {
 
     private int score;
 
-    public Player(int score){
+    public Player(int score){ 
         setScore(score);
     }
 
@@ -14,7 +12,7 @@ public class Player {
 
     public void setScore(int score){
 
-        if(  score < 0){
+        if(  score < 0){  // ถ้าscoreติดลบให้โยนข้อผิดพลาด
             throw new IllegalArgumentException("Score must not be negative.");
         }
         

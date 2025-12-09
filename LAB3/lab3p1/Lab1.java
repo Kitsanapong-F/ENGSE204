@@ -11,7 +11,7 @@ public class Lab1 {
         try {   //ตรวจจับข้อผิดพลาด
             User N1 = new User(name); 
             System.out.println(N1.getUsername()); 
-        } catch (IllegalArgumentException e) { //ถ้ามีข้อผิดพลาดให้ทำคำสั่งที่ตามมา
+        } catch (IllegalArgumentException e) { //ตรวจจับข้อผิดพลาด
             System.out.println("Error: " + e.getMessage());
         }
 

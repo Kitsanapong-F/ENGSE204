@@ -9,17 +9,10 @@ public class Lab3 {
         String defaultPassword = input.nextLine();
         String newPassword = input.nextLine();
 
-        try{
-            User u1 = new User(defaultPassword);
-            
-            u1.setPassword(newPassword);
-            u1.display();
-        }
-        catch(IllegalArgumentException e){
-            System.out.println("Error: " + e.getMessage());
-        }
+        User u1 = new User(defaultPassword);
 
-        input.close();
+        u1.setPassword(newPassword);
+        u1.display();
 
     }
 
@@ -31,8 +24,8 @@ class User {
 
     public User(String initialPassword){
         
-        setpass(initialPassword);
-        
+        this.password = initialPassword;
+       
     }
 
     public String getPassword(){
@@ -43,29 +36,16 @@ class User {
 
         if(initialPassword.length() >= 8){
             
-            setpass(initialPassword);
-
             System.out.println("Password updated");
 
             this.password = initialPassword;
         }
         else if(initialPassword.length()<=7){
             
-            setpass(initialPassword);
-
             System.out.println("Password is too short");
 
         }
         
-    }
-    
-    public void setpass(String initialPassword){
-        
-        if( initialPassword  == null || initialPassword.isEmpty()){ 
-            throw new IllegalArgumentException("Password cannot be null or empty");
-        }
-        this.password = initialPassword;
-       
     }
 
     public void display(){

@@ -10,20 +10,22 @@ public class LAB4 {
         input.nextLine();
 
         try{
-           
             for(int i = 0 ; i<num ; i++){
            
             String name = input.nextLine();
             new Product(name);
 
-        }
+            }
 
-        System.out.println(Product.getProductCount());
+            System.out.println(Product.getProductCount());
 
         }
         catch(IllegalArgumentException e){
+            
             System.out.println("Error: " + e.getMessage());
+
         }
+        
         input.close();
 
     }

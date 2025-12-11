@@ -28,6 +28,7 @@ public class Lab8 {
 
         System.out.println("Final Stock:"+i1.getStock());
 
+        input.close();
     }
 }
 

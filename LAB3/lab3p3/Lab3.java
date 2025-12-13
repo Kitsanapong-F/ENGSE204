@@ -9,10 +9,12 @@ public class Lab3 {
         String defaultPassword = input.nextLine();
         String newPassword = input.nextLine();
 
-        User u1 = new User(defaultPassword);
+        User u1 = new User(defaultPassword);  //สร้างออปเจ็ก 
 
         u1.setPassword(newPassword);
         u1.display();
+
+        input.close();
 
     }
 
@@ -29,18 +31,20 @@ class User {
     }
 
     public String getPassword(){
+
         return password;
+
     }
 
     public void setPassword(String initialPassword){
 
-        if(initialPassword.length() >= 8){
+        if(initialPassword.length() >= 8){ //ถ้ารหัสที่รับมากกว่า8 ให้เซตค่ารหัส
             
             System.out.println("Password updated");
 
             this.password = initialPassword;
         }
-        else if(initialPassword.length()<=7){
+        else if(initialPassword.length()<=7){ //ถ้าน้อบกว่า 8 ให้แสดงข้อความ
             
             System.out.println("Password is too short");
 
@@ -49,7 +53,9 @@ class User {
     }
 
     public void display(){
+
         System.out.println(getPassword());
+
     }
 
 }

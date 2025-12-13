@@ -6,18 +6,20 @@ public class Lab5 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        String connectionString = input.nextLine();
+        String connectionsString = input.nextLine();
 
-        DatabaseConnection d1 = new DatabaseConnection(connectionString);
+        DatabaseConnection d1 = new DatabaseConnection(connectionsString); //สร้างออบเจ็กต์ 
 
-        d1.connect();
-        d1.disconnected();
+        d1.connect();                                                      //เรียกใช้เมธอดconnect
+        d1.disconnected();                                                    //เรียกใช้เมธอด.disconnected
         d1.disconnected();
 
         System.out.println(d1.isConnected());
+
+        input.close();
+
     }
 }
-
 class DatabaseConnection{
 
     private String connectionsString;
@@ -34,31 +36,22 @@ class DatabaseConnection{
     }
 
     public void connect(){
-        if(connected == false){
-            
+        if(!connected){ //ถ้าconnected มีค่าเป็นfalse
             connected = true;
-
             System.out.println("Connected to "+connectionsString);
         }
-        else if(connected == true){
-
-            System.out.println("Already disconnected");
-
+        else { //ถ้าconnected มีค่าเป็น true
+            System.out.println("Already connected");
         }
     }
 
     public void disconnected(){
-        if(connected == true){
-            
+        if(connected){  //ถ้าconnected มีค่าเป็น true
             connected = false;
-            
             System.out.println("Disconnected");
         }
-        else if(connected == false){
-            
+        else { //ถ้าconnected มีค่าเป็นfalse
             System.out.println("Already disconnected");
-
         }
     }
-
 }

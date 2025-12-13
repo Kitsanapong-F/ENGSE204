@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Lab8 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
+        
+        try{
         String productName = input.next();
         int initialStock = input.nextInt();
 
@@ -28,6 +29,11 @@ public class Lab8 {
 
         System.out.println("Final Stock:"+i1.getStock());
 
+        }
+        catch(IllegalArgumentException e){
+            System.out.println("Error: "+e.getMessage());
+        }
+
         input.close();
     }
 }
@@ -39,12 +45,9 @@ class InventoryItem{
 
     public InventoryItem(String productName,int initialStock){
 
-        if(initialStock >= 0){
-            this.stock = initialStock;
-        }
-        else if(initialStock<0){
-            this.stock = 0;
-        }
+        setproductName(productName);
+        setinitialStock(initialStock);
+        
     }
 
     public String getProductName(){
@@ -82,5 +85,21 @@ class InventoryItem{
         else if(amount<=0){
             System.out.println("Incalid amount.");
         }
+    }
+
+    public void setinitialStock(int initialStock){ //เมธอดเซตสต็อกเริ่มต้น
+        if(initialStock >= 0){
+            this.stock = initialStock;
+        }
+        else if(initialStock<0){
+            this.stock = 0;
+        }
+    }
+
+    public void setproductName(String productName){ //เช็คชื่อสินค้า
+        if(productName == null || productName.isEmpty()){
+            throw new IllegalArgumentException("Product name cannot be null or empty.");
+        }
+        this.productName = productName;
     }
 }

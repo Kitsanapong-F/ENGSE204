@@ -3,7 +3,7 @@ package LAB3.lab3p6;
 import java.util.Scanner;
 
 public class Lab6 {
-public static void main(String[] args) {
+    public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
 
     double startingBalance = input.nextDouble();
@@ -18,8 +18,8 @@ public static void main(String[] args) {
     System.out.println("Final Balance:"+b1.getBalance());
 
     input.close();
-}
-     
+    
+    }   
 }
 
 class BankAccount{
@@ -27,58 +27,40 @@ class BankAccount{
     private  double balance;
  
     public BankAccount(Double initiaBalance){
-
-        if(initiaBalance >= 0){
-            
+        if(initiaBalance >= 0){  //เช็คเงินเริ่มต้น
             this.balance = initiaBalance;
-
         }
-        else if(initiaBalance < 0){
-            
+        else if(initiaBalance < 0){  
             this.balance = 0;
-
         }   
-
     }
 
     public double getBalance(){
         return balance;
     }
 
-    protected void deposit(double amount){
+    protected void deposit(double amount){ //เมธอดฝากเงิน
 
-        if(amount > 0){
-            
+        if(amount > 0){ //เช็คเงินติดลบ
             balance += amount;
-
             System.out.println("Deposit successful.");
-
         }
-        else if(amount <= 0){
-            
+        else if(amount <= 0){ 
             System.out.println("Invalid deposit amount.");
-
         }
     }
 
-    public void withdraw(double amount){
+    public void withdraw(double amount){ //เมธอดถอนเงิน
 
-        if(amount > 0 || amount <= balance ){
-            
+        if(amount > 0 || amount <= balance ){ //เช็คเงินติดลบ
             balance -= amount;
-            
             System.out.println("Withdrawal successful");
-
         }
         else if(amount > balance){
-
             System.out.println("Insufficient funds");
-
         }
         else if(amount<=0){
-
             System.out.println("Invalid withdrawal amount");
-
         }
     }
 }

@@ -6,32 +6,36 @@ public class Lab15 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        String username = input.next();
+       try{ 
+            String username = input.next();
 
-        User u1 = new User(username);
+            User u1 = new User(username);
 
-        int N = input.nextInt();
+            int N = input.nextInt();
 
-        for(int i = 0;i < N;i++){
+            for(int i = 0;i < N;i++){
 
-            String mode = input.next();
+                String mode = input.next();
 
-            if(mode.equals("SET_POLICY")){
+                if(mode.equals("SET_POLICY")){
 
-                int max = input.nextInt();
+                    int max = input.nextInt();
 
-                u1.setPolicy(max);
+                    u1.setPolicy(max);
 
-            }
-            else if(mode.equals("LOGIN")){
+                }  
+                else if(mode.equals("LOGIN")){
 
-                String password = input.next();
+                    String password = input.next();
 
-                u1.login(password);
+                    u1.login(password);
 
+                }
             }
         }
-
+        catch(IllegalArgumentException e){
+            System.out.println("Error: " + e.getMessage());
+        }
         input.close();
 
     }
@@ -46,7 +50,7 @@ class User{
 
     public User(String username){
         
-        this.username = username;
+        setUsername(username);
         this.failedAttempts = 0;
         this.isLocked = false;
 
@@ -110,5 +114,12 @@ class User{
 
             }
         }
+    }
+
+    public void setUsername(String username){
+          if(username == null || username.isEmpty()){
+            throw new IllegalArgumentException("User name cannot be null or empty");
+        }
+        this.username = username ;
     }
 }

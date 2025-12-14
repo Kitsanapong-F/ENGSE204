@@ -71,7 +71,7 @@ class LicenseManager{
 
     }
 
-    public static void checkIn(){
+    public static void checkIn(){ //เมธอดเช็คค่า
         
         if(usedLicenses > 0){
             usedLicenses--;
@@ -83,7 +83,7 @@ class LicenseManager{
         }
     }
 
-    public static void displayStatus(){
+    public static void displayStatus(){ //เมธอดแสดงค่า
 
         System.out.println("Used: "+usedLicenses);
         System.out.println("Available: "+(maxLicenser-usedLicenses));

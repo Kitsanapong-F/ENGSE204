@@ -6,7 +6,7 @@ public class Lab8 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
-        try{
+        try{  //ตรวจจับข้อผิดพลาด
         String productName = input.next();
         int initialStock = input.nextInt();
 
@@ -30,7 +30,7 @@ public class Lab8 {
         System.out.println("Final Stock:"+i1.getStock());
 
         }
-        catch(IllegalArgumentException e){
+        catch(IllegalArgumentException e){ //ถ้ามีข้อผิดผลาดให้ทำคำสั่ง
             System.out.println("Error: "+e.getMessage());
         }
 
@@ -45,8 +45,8 @@ class InventoryItem{
 
     public InventoryItem(String productName,int initialStock){
 
-        setproductName(productName);
-        setinitialStock(initialStock);
+        setProductName (productName);
+        setInitialStock(initialStock);
         
     }
 
@@ -67,13 +67,13 @@ class InventoryItem{
             System.out.println("Stock added.");
         }
         else if(amount<=0){
-            System.out.println("InvaIid amount.");
+            System.out.println("Invalid amount.");
         }
     }
 
     public void sellStock(int amount){
 
-        if(amount > 0 || amount<= stock){
+        if(amount > 0 && amount<= stock){
             
             stock -= amount;
 
@@ -82,12 +82,12 @@ class InventoryItem{
         else if(amount>stock){
             System.out.println("Not enough stock.");
         }
-        else if(amount<=0){
-            System.out.println("Incalid amount.");
+        else{
+            System.out.println("Invalid amount.");
         }
     }
 
-    public void setinitialStock(int initialStock){ //เมธอดเซตสต็อกเริ่มต้น
+    public void setInitialStock(int initialStock){ //เมธอดเซตสต็อกเริ่มต้น
         if(initialStock >= 0){
             this.stock = initialStock;
         }
@@ -96,7 +96,7 @@ class InventoryItem{
         }
     }
 
-    public void setproductName(String productName){ //เช็คชื่อสินค้า
+    public void setProductName(String productName){ //เช็คชื่อสินค้า
         if(productName == null || productName.isEmpty()){
             throw new IllegalArgumentException("Product name cannot be null or empty.");
         }

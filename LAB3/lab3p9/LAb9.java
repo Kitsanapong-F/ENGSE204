@@ -29,6 +29,8 @@ public class LAb9 {
 
             System.out.println(user1.getPassword());
             System.out.println(user2.getPassword());
+
+            input.close();
         }
 }
 
@@ -41,16 +43,11 @@ class User{
     public static void setMinlength(int length){
 
         if(length<4){
-
             System.out.println("Invalid length");
-
         }
         else if(length>=4){
-
             minPasswordLength = length;
-
             System.out.println("New min length set to "+length);
-            
         }
     }
 
@@ -60,26 +57,13 @@ class User{
 
     public User(String username,String password){
 
-        if(password.length()>=minPasswordLength){
-            
-            this.password = password;
-
-            System.out.println("Creation successful.");
-        }
-        else if(password.length()<minPasswordLength){
-            
-            this.password = "invalid";
-
-            System.out.println("Creation failed.");
-        }
+       setPassword(password);
     }
 
-    public void  setPassword(String newPassword){
+    public void  setPassword(String newPassword){  //เช็ครหัส
 
         if(newPassword.length()>=minPasswordLength){
-
             this.password = newPassword;
-
             System.out.println("Update successful.");
         }
         else if(newPassword.length()<minPasswordLength){
@@ -89,6 +73,18 @@ class User{
 
     public String getPassword(){
         return password;
+    }
+
+    public void setPassword(){ //เช็คความยาวรหัส
+        
+        if(password.length()>=minPasswordLength){ 
+            this.password = password;
+            System.out.println("Creation successful.");
+        }
+        else if(password.length()<minPasswordLength){
+            this.password = "invalid";
+            System.out.println("Creation failed.");
+        }
     }
 }
 

@@ -48,6 +48,7 @@ public class Lab14 {
                 System.out.println("Total Transactions: "+BankAccount.getTotaltransactionCount());
             }
         }
+        input.close();
     }    
 }
 
@@ -56,7 +57,7 @@ class BankAccount{
     private double balance;
     private static int totaltransactionCount = 0;
     
-    public BankAccount(double initialDeposit){
+    public BankAccount(double initialDeposit){ //เช็คเงินมีมากกว่า0
 
         if(initialDeposit>=0){
             
@@ -71,7 +72,7 @@ class BankAccount{
 
     }
 
-    public void deposit(double amount){
+    public void deposit(double amount){ //เช็คเงินติดลบ
 
         if(amount>0){
             
@@ -87,7 +88,7 @@ class BankAccount{
 
     public void withdraw(double amount){
 
-        if(amount>0 && amount<=balance){
+        if(amount>0 && amount<=balance){ //เช็คค่าจำนวนเงิน
             
             balance -= amount;
             totaltransactionCount++;

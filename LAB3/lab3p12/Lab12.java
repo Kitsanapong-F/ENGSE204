@@ -6,18 +6,24 @@ public class Lab12 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        String name = input.nextLine();
-        double monthlySalary = input.nextDouble();
-        double taxRate = input.nextDouble();
-        double raiseAmount = input.nextDouble();
+        try{
+            String name = input.nextLine();
+            double monthlySalary = input.nextDouble();
+            double taxRate = input.nextDouble();
+            double raiseAmount = input.nextDouble();
 
-        Employee e1 = new Employee(name, monthlySalary);
+            Employee e1 = new Employee(name, monthlySalary);
         
-        System.out.println("Tax (Before): "+e1.calculateTax(taxRate));
+            System.out.println("Tax (Before): "+e1.calculateTax(taxRate));
 
-        e1.giveRaise(raiseAmount);
+            e1.giveRaise(raiseAmount);
 
-        System.out.println("Tax (After): "+e1.calculateTax(taxRate));
+            System.out.println("Tax (After): "+e1.calculateTax(taxRate));
+        }
+        catch(IllegalArgumentException e){
+            System.out.println("Error: " + e.getMessage());
+        }
+        input.close();
     }
 }
 
@@ -29,13 +35,7 @@ class Employee{
     public Employee(String name,double monthlySalary){
         
         this.name = name;
-
-        if(monthlySalary>0){
-            this.monthlySalary=monthlySalary;
-        }
-        else if(monthlySalary<=0){
-            this.monthlySalary = 0;
-        }
+        setmonthlySalary(monthlySalary);
 
     }
 
@@ -55,12 +55,27 @@ class Employee{
         }
     }
 
-    private double getAnnualSalary(){
+    private double getAnnualSalary(){ //กำหนดภาษี
         return monthlySalary*12;
     }
 
-    public double calculateTax(double taxRate){
+    public double calculateTax(double taxRate){ //คิดค่าภาษี
        return getAnnualSalary()*taxRate;
     }
 
+    public void setmonthlySalary(double monthlySalary){
+        if(monthlySalary>0){ //เช็คเงิน
+            this.monthlySalary=monthlySalary;
+        }
+        else if(monthlySalary<=0){
+            this.monthlySalary = 0;
+        }
+    }
+
+    public void setName(String name){ //เช็คชื่อ
+        if(name == null || name.isEmpty()){
+            throw new IllegalArgumentException("User name cannot be null or empty");
+        }
+        this.name = name ;
+    }
 }

@@ -36,8 +36,7 @@ class Product{
 
     public Product(String name){
 
-        this.name = name;
-        this.price = 0.0;
+       this(name, 0.0);
     }
 
     public Product(String name,double price){

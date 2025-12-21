@@ -14,10 +14,10 @@ public class Lab7 {
         Resource r2 = new Resource(id2);
         Resource r3 = new Resource(id3);
 
-        r1 = null;
+        r1 = null; //กำหนดเป็นค่าว่าง
         r2 = null;
 
-        System.gc();
+        System.gc(); //เรียกใช้gc
 
         r3 = null;
 

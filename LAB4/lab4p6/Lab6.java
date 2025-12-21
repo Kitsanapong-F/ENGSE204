@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class Lab6 {
  public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
-    
+    //รับค่า
     int x = input.nextInt();
     int y = input.nextInt();
     int dx = input.nextInt();
     int dy = input.nextInt();
 
-    Point p1 = new Point(x, y);
+    Point p1 = new Point(x, y); //สร้างออบเจ็ก
     Point p2 = p1.move(dx, dy);
     Point p3 = p2.move(dx, dy);
 
-    p1.displayinfo();
+    p1.displayinfo(); //แสดงข้อมูล
     p2.displayinfo();
     p3.displayinfo();
 
@@ -52,6 +52,5 @@ class Point{
 
     public void displayinfo(){
         System.out.println("("+x+","+y+")");
-    }
-        
+    }  
 }

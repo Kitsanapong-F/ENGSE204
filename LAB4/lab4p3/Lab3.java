@@ -8,9 +8,9 @@ public class Lab3 {
 
         int mode = input.nextInt();
 
-        if(mode == 1){
-            Player p1 = new Player();
-            p1.displayinfo();
+        if(mode == 1){ //เช็คโหมด
+            Player p1 = new Player();  //สร้างออบเจ็กต์
+            p1.displayinfo();  //แสดงข้อมูล
         }
         else if(mode == 2){
 
@@ -20,6 +20,9 @@ public class Lab3 {
             Player p1 = new Player(name, level);
             p1.displayinfo();
         }
+
+        input.close();
+
     }
 }
 

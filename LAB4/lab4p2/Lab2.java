@@ -8,13 +8,13 @@ public class Lab2 {
 
         int mode = input.nextInt();
 
-        if (mode == 1) {
+        if (mode == 1) { //เช็คโหมด
             
             input.nextLine();
             String name = input.nextLine();
-            Product p1 = new Product(name);
-            p1.displayinfo();
-
+            Product p1 = new Product(name); //สร้างออบเจ็กต์Product
+            p1.displayinfo();  //แสดงข้อมูล
+ 
         }
         else if(mode == 2){
 
@@ -25,8 +25,7 @@ public class Lab2 {
             p1.displayinfo();
             
         }
-
-        
+        input.close();        
     }
 }
 class Product{

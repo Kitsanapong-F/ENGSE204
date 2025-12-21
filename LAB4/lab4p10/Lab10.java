@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Lab10 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+        //รับค่าโหมด
         int mode = input.nextInt();
-
-        if (mode == 1) {
+        //เช็คโหมด
+        if (mode == 1) { 
             TimePeriod t1 = new TimePeriod();
             t1.displayPeriod();
         }
@@ -18,6 +18,7 @@ public class Lab10 {
             TimePeriod t1 = new TimePeriod(startHour,endHour);
             t1.displayPeriod();
         }
+        input.close();
     }
 }
 

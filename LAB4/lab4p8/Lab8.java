@@ -8,6 +8,8 @@ public class Lab8 {
 
         int mode = input.nextInt();
         input.nextLine();
+
+        //เช็คโหมด
         if(mode == 1){
             String title = input.nextLine();
             Movie m1 = new Movie(title);
@@ -26,6 +28,7 @@ public class Lab8 {
             Movie m1 = new Movie(title, director, rating);
             m1.displayDetails();
         }
+        input.close();
     }
 }
 class Movie{
@@ -46,10 +49,10 @@ class Movie{
     public Movie(String title,String director,double rating){
 
         if(rating>10.0){
-            this.rating = rating;
+            rating = 10.0;
         }
         else if(rating<0.0){
-            this.rating=0.0;
+            rating=0.0;
         }
         this.title = title;
         this.director =director;

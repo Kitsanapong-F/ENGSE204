@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Lab13 {
     public static void main(String[] args) {
         Scanner input =new Scanner(System.in);
-        
+        //ตั้งค่านโยบาย
         int max = input.nextInt();
 
         input.nextLine();
@@ -16,13 +16,15 @@ public class Lab13 {
         int D2 = input.nextInt();
         int D3 = input.nextInt();
 
-        Supscription s1 = new Supscription(name, D1);
+        Supscription s1 = new Supscription(name, D1); //สร้างอบบเจ็กต์
         Supscription.setMaxDuration(max);
 
         s1 = s1.extend(D2);
         s1 = s1.extend(D3);
 
         s1.displayInfo();
+
+        input.close();
     }  
 }
 

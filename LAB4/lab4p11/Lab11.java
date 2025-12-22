@@ -7,12 +7,12 @@ public class Lab11 {
 
         Scanner input = new Scanner(System.in);
 
-       
+       //รับค่าbaseConfig
         String baseTheme = input.nextLine();
         int baseFontSize = input.nextInt();
         boolean baseDarkMode = input.nextBoolean();
         input.nextLine();
-
+        //รับค่าuserConfig
         String userTheme = input.nextLine();
         int userFontSize = input.nextInt();
         boolean userDarkMode = input.nextBoolean();
@@ -24,6 +24,8 @@ public class Lab11 {
         Configuration finalConfig = new Configuration(baseConfig, userConfig);
 
         finalConfig.displaySettings();
+
+        input.close();
     }
 }
 

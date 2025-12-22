@@ -18,6 +18,8 @@ public class Lab14 {
 
         s1.displayScore();
         s2.displayScore();
+
+        input.close();
     }    
 }
 class ScoreBoard{

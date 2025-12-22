@@ -6,17 +6,22 @@ public class Lab12 {
     
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
+        //รับค่า
         String name = input.nextLine();
         int start = input.nextInt();
         int newHour = input.nextInt();
+        //สร้างออบเจ็ก
         Schedule sch1 = new Schedule(start);
+        
         EmployeeSchedule emp1 = new EmployeeSchedule(name, sch1);
         EmployeeSchedule emp2 = new EmployeeSchedule(emp1);
+        
         sch1.setHour(newHour);
 
         emp1.displaySchedule();
         emp2.displaySchedule();
+
+        input.close();
     }
 }
 

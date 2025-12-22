@@ -58,7 +58,6 @@ class Movie{
         this.director =director;
         this.rating = rating;
 
-
     }
 
     public void displayDetails(){

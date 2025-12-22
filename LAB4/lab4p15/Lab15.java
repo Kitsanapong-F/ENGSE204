@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Lab15 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
+        //รับค่า
         int max = input.nextInt();
         AuditRecord.setPolicy(max);
         input.nextLine();
@@ -21,7 +21,9 @@ public class Lab15 {
             a1 = a1.addMessage(maessages);
         }
 
-        a1.displayLog();
+        a1.displayLog(); //แสดงข้อมูล
+
+        input.close();
     }
 }
 class AuditRecord{
@@ -52,7 +54,7 @@ class AuditRecord{
             }
         }
     }
-
+    //เมธอดเซตค่าmax
     public static void setPolicy(int max){
         if(max>0){
             maxMaessages = max;
@@ -82,7 +84,7 @@ class AuditRecord{
             return this; 
         }
     }
-
+    //เมธอดแสดงข้อมูล
     public void displayLog() {
         
         System.out.print("User: " + user + ", Logs: " + logMessages.length + " [");

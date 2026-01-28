@@ -1,5 +1,5 @@
 package LAB5.lab5p9;
-
+//supclass
 public class PhysicalProduct extends Item{
     
     protected double unitPrice;

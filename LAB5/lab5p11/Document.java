@@ -1,5 +1,5 @@
 package LAB5.lab5p11;
-
+//superclass
 public class Document {
     
     protected String title;

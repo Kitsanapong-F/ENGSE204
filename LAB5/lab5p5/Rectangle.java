@@ -1,5 +1,5 @@
 package LAB5.lab5p5;
-
+//supclass
 public class Rectangle extends Shape {
     
     protected double width;

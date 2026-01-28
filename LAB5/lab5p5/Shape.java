@@ -1,5 +1,5 @@
 package LAB5.lab5p5;
-
+//superclass
 public class Shape {
     
     protected String name;

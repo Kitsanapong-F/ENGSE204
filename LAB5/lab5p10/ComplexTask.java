@@ -1,5 +1,5 @@
 package LAB5.lab5p10;
-
+//supclass
 public class ComplexTask extends ProjectTask{
     
     protected double setupFee;

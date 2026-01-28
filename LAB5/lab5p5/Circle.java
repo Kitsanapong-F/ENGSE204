@@ -1,5 +1,5 @@
 package LAB5.lab5p5;
-
+//supclass
 public class Circle extends Shape {
     
     protected double radius;

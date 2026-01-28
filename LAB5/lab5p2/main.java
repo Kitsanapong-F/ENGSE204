@@ -13,5 +13,7 @@ public class main {
 
         cat.displayInfo();
         cat.makeSound();
+        
+        input.close();
     }
 }

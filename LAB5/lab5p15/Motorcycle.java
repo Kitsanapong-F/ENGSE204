@@ -2,7 +2,8 @@ package LAB5.lab5p15;
 
 public class Motorcycle extends RentalVehicle{
     public Motorcycle(String model,double rentalRate){
-        super(model, rentalRate);
+        super(model, rentalR
+            ate);
     }
 
     @Override

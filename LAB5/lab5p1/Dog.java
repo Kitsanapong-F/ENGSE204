@@ -1,5 +1,5 @@
 package LAB5.lab5p1;
-
+//supclass
 public class Dog extends Animal {
     
     public Dog(String name,int age){

@@ -1,5 +1,5 @@
 package LAB5.lab5p7;
-
+//superclass
 public class Employee {
     
     protected String name;

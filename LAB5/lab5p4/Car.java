@@ -1,5 +1,5 @@
 package LAB5.lab5p4;
-
+//supclass
 public class Car extends Vehicle{
     
     protected int wheels;

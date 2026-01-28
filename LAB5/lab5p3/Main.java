@@ -11,5 +11,7 @@ public class Main {
         Manager m1 = new Manager(salary);
 
         System.out.println(m1.calculateBonus());
+
+        input.close();
     }
 }

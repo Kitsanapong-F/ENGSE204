@@ -1,5 +1,5 @@
 package LAB5.lab5p7;
-
+//supclass
 public class Manager extends Employee{
     
     protected double fixedBonus;

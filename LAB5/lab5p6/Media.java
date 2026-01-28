@@ -1,5 +1,5 @@
 package LAB5.lab5p6;
-
+//superclass
 public class Media {
     
     protected String title;

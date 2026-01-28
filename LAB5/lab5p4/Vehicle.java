@@ -1,5 +1,5 @@
 package LAB5.lab5p4;
-
+//superclass
 public class Vehicle {
     
     protected String color; 

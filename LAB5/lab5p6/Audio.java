@@ -1,5 +1,5 @@
 package LAB5.lab5p6;
-
+//supclass
 public class Audio extends Media{
     protected String quality;
 

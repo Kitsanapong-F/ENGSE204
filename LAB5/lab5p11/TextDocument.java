@@ -1,5 +1,5 @@
 package LAB5.lab5p11;
-
+//supclass
 public class TextDocument extends Document{
     
     protected int wordCount;

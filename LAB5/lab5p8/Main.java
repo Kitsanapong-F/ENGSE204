@@ -25,10 +25,8 @@ public class Main {
                 employee.applyBonus(1000);
             }
 
-            System.out.println(p1[i].getStatus());
-            
+            System.out.println(p1[i].getStatus());   
         }
+        input.close();
     }
-    
-
 }

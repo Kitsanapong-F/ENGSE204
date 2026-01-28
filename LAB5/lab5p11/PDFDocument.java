@@ -1,5 +1,5 @@
 package LAB5.lab5p11;
-
+//supclass
 public class PDFDocument extends Document{
     
     protected int pageCount;

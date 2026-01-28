@@ -1,5 +1,5 @@
 package LAB5.lab5p3;
-
+//supclass
 public class Manager  extends Employee{
     
     public Manager(double salary){

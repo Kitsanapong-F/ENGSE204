@@ -1,5 +1,5 @@
 package LAB5.lab5p10;
-
+//supclass
 public class SimpleTask  extends ProjectTask{
     
     public SimpleTask(String desc,int hours){

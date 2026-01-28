@@ -1,5 +1,5 @@
 package LAB5.lab5p12;
-
+//superclass
 public class Service {
     
     protected String name;

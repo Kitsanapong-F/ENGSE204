@@ -1,5 +1,5 @@
 package LAB5.lab5p8;
-
+//supclass
 public class Student extends Person{
     
     protected int studentld;

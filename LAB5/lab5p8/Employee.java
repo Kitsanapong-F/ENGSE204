@@ -1,5 +1,5 @@
 package LAB5.lab5p8;
-
+//superclass
 public class Employee extends Person {
     
     protected double salary;

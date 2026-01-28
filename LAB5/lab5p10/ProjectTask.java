@@ -1,5 +1,5 @@
 package LAB5.lab5p10;
-
+//superclass
 public class ProjectTask {
     protected String description;
     protected int baseHours;

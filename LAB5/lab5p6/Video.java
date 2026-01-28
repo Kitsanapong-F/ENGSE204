@@ -1,5 +1,5 @@
 package LAB5.lab5p6;
-
+//supclass
 public class Video extends Media{    
     
     protected int duration;

@@ -22,5 +22,6 @@ public class Main {
         PalrollProcessor.process(s1);
         PalrollProcessor.process(m1);
 
+        input.close();
     }
 }

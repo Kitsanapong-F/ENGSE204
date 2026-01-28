@@ -12,5 +12,7 @@ public class main {
         Dog dog = new Dog(name, age);
         dog.makeSound();
         dog.displayInfo();
+        
+        input.close();
     }
 }
